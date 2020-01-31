@@ -1,0 +1,170 @@
+html {
+    box-sizing: border-box;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial;
+    line-height: 1.5;
+    background: #f2f2f2;
+    color: #323232;
+
+}
+
+img{
+    max-width: 100%;
+    border-radius: 35%;
+}
+
+.container {
+    max-width: 960;
+    margin: 40px auto;
+    padding: 32px;
+    background: white;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.1);
+    
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 15px;
+    padding: 24px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+section:last-child{
+    border-bottom: none;
+}
+
+.section-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*------------
+  Contact Info
+  -----------*/
+
+ img .avatar{
+    width: 130px;
+ }
+
+.my-name{
+    font-size: 38px;
+    line-height: 1;
+}
+
+.my-title{
+    font-size: 24px;
+    font-weight: 200;
+    color: rgb(14, 122, 158);
+}
+
+.contact{
+    display: grid;
+    padding-top: 1em;
+     
+}
+
+.contact-list{
+    text-decoration: none;
+    color: inherit;
+    padding: 3px;
+    font-size: 16px;
+}
+
+i {
+    width: 20px;
+    height: 20px;
+    color: black;
+}
+
+h1{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+
+/*------------
+  Experience
+  -----------*/
+
+  .job{
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid lightgrey;
+  }
+  .job:last-child{
+      border-bottom: none;
+  }
+
+  .job-title-container{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-size: inherit;
+  }
+
+  .job-company{
+      font-weight: bold;
+      line-height: 1.2;
+  }
+
+/*------------
+  Education
+  -----------*/
+
+  .training {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid lightgrey; 
+  }
+
+  .training:last-child{
+      border-bottom: none;
+  }
+
+  .training-title-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: inherit; 
+  }
+
+  .traning-inst {
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  /*------------
+  Skills
+  -----------*/
+
+  .skills-container ul {
+      list-style: disc;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 15px;
+      margin-bottom: 24;
+  }
+
+  /*------------
+  References
+  -----------*/
+
+  .references-container ul {
+    list-style: none; 
+
+  }
+
+  .references-container a:hover{
+      color:purple;
+  }
+  .reference {
+     font-size: inherit;
+  }
