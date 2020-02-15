@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    box-sizing: border-box;
+    padding: 50px 60px;
+    background-color: indianred;
+    font-family: sans-serif;
+  }
+  
+  .main-container {
+    background-color: ivory;
+    padding: 40px 25px;
+    padding-bottom: 480px;
+  }
+  
+  .logo-box {
+    border: 1px solid green;
+    width: 10%;
+    height: 80px;
+    background-color: lightgrey;
+  }
+  
+  .logo-box p {
+    font-size: 15px;
+    margin-left: 45px;
+    padding-top: 30px;
+  }
+  
+  .navi {
+    border: 1px solid green;
+    width: 25%;
+    height: 80px;
+    background-color: lightgrey;
+  }
+  
+  .navi p {
+    font-size: 15px;
+    margin-left: 120px;
+    padding-top: 30px;
+  }
+  
+  h1 {
+    font-size: 40px;
+    padding-top: 60px;
+  }
+  .Sign-up-info p {
+    line-height: 1.5em;
+    word-spacing: 0.2em;
+    padding-top: 30px;
+  }
+  
+  h2 {
+    font-size: 30px;
+    padding: 30px 6px;
+  }
+  
+  .progress p {
+    padding-top: 20px;
+    word-spacing: 0.1em;
+  }
+  
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  progress {
+    width: 100%;
+    height: 40px;
+    background-color: green;
+  }
+  .progress p {
+    padding-top: 20px;
+    word-spacing: 0.1em;
+  }
+
+  /*input section*/
+
+.input-section {
+    padding-top: 25px;
+  }
+  
+  .form-box {
+    padding: 10px 0px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .form-box label {
+    flex-basis: 10rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  .form-box input {
+      width: 25%;
+      height: 35px;
+    }
+/*input & label section*/
+
+    #ctype{
+        width: 15%;
+        height: 35px;
+    }
+    #card{
+        width: 4%;
+        height: 39px;
+    }
+    .Fname{
+        margin-left: 300px;
+    }
+
+#Fname{
+    margin-left: -55px;
+}
+
+#month  {
+    width: 5%;
+}
+#year{
+    width: 5%;
+    margin-left: -55px;
+}
+.Exyear{
+    margin-left: 65px;
+}
+#cvv{
+    width: 5%;
+}
+
+    /*button*/
+
+   
+.nbutton{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.Next-step {
+  border: 1px solid green;
+  width: 18%;
+  height: 80px;
+  background-color: lightgrey;
+  
+}
+
+.Next-step p {
+  font-size: 15px;
+  margin-left: 75px;
+  padding-top: 30px;
+
+}
+
+.Next-step a {
+  text-decoration: none;
+  color: inherit;
+ 
+}
+
+.Next-step a:hover {
+  color: rgb(255, 251, 5);
+} 

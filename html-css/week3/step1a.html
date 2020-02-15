@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="step1a.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header-section">
+        <div class="logo-container">
+          <div class="logo-box">
+            <p>Logo</p>
+          </div>
+          <div class="navi">
+            <p>Navigation</p>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="Sign-up-info">
+          <h1>Sign Up to yourcustomtailor.com</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+            molestias nam quasi ipsa possimus<br>
+            quis.<br>
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, numquam
+            facilis impedit aperiam natus earum<br>
+            obcaecati odio hic eos aliquid ipsa dolorum corrupti adipisci non quibusdam saepe. Ab, dolorem
+            perspiciatis.<br>
+            obcaecati odio hic eos aliquid ipsa dolorum corrupti adipisci non quibusdam saepe. Ab, dolorem
+            perspiciatis.<br>
+          </p>
+        </div>
+        <div class="progress">
+          <h2>
+            Step 1/4 - tell us who you are?
+          </h2>
+          <h3>Progress</h3>
+          <progress value="10" max="100">10%</progress>
+          <p>
+            Nice to meet you.Please let's spend a minute to get to know each
+            other?Please enter the following:
+          </p>
+        </div>
+      </section>
+      <form class="input-section" action="#">
+        <div class="form-box">
+          <label for="firstname">First name*</label>
+          <input type="text" id="firstname" minlength="3" maxlength="26" />
+          <label for="lastname">Last name*</label>
+          <input type="text" id="lastname" minlength="3" maxlength="26" />
+        </div>
+        <div class="form-box">
+          <label for="country">Country*</label>
+          <input type="text" id="country" />
+          <select name="country">
+            <!--width:2%;-->
+            <option value=""></option>
+            <option value="Afganistan">Afghanistan</option>
+            <option value="Albania">Albania</option>
+            <option value="Algeria">Algeria</option>
+          </select>
+        </div>
+        <div class="form-box">
+          <label for="street">Street address*</label>
+          <input type="text" name="street" id="Street" pattern="[A-Za-z]{3}" />
+          <label for="street">Post code*</label>
+          <input
+            type="text"
+            name="pcode"
+            id="postcode"
+            minlength="4"
+            maxlength="4"
+          />
+        </div>
+        <div class="form-box">
+          <!---style the labels-->
+          <label for="pdescription"
+            >Profile description 
+            <p>
+              Lorem ipsum dolor,sit adipisicing<br />
+              elit. Facilis lab deleniti<br />
+              molestias nemo<br />
+            </p>
+          </label>
+          <input class="pdescription" type="text" id="pdescription" minlength="10" maxlength="500" />
+
+          <!----give input a class & style-->
+        </div>
+        <div class="shipping-address">
+          <p>
+            Use thesame address for billing and shipping?Uncheck below to fill
+            out a seperate shipping address.
+          </p>
+        </div>
+
+        <div class="shipping-address">
+          <div>
+            <label for="Saddress">Shipping address</label>
+            <input class="checkbox" type="checkbox" name="Saddress" value="address" checked />
+          </div>
+          <div class="Next-step">
+            <a href="step1b.html"><p>Next step</p></a>
+            <!--<button
+            class="button"
+            onclick="window.location.href = 'step2.html';"
+          >
+            <p>Next step</p>
+          </button> ---->
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

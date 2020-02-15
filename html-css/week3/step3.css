@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 50px 60px;
+  background-color: indianred;
+  font-family: sans-serif;
+}
+
+.main-container {
+  background-color: ivory;
+  padding: 40px 25px;
+}
+
+.logo-box {
+  border: 1px solid green;
+  width: 10%;
+  height: 80px;
+  background-color: lightgrey;
+}
+
+.logo-box p {
+  font-size: 15px;
+  margin-left: 45px;
+  padding-top: 30px;
+}
+
+.navi {
+  border: 1px solid green;
+  width: 25%;
+  height: 80px;
+  background-color: lightgrey;
+}
+
+.navi p {
+  font-size: 15px;
+  margin-left: 120px;
+  padding-top: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  padding-top: 60px;
+}
+.Sign-up-info p {
+  line-height: 1.5em;
+  word-spacing: 0.2em;
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 30px;
+  padding: 30px 6px;
+}
+
+.progress p {
+  padding-top: 20px;
+  word-spacing: 0.1em;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+progress {
+  width: 100%;
+  height: 40px;
+  background-color: green;
+}
+.progress p {
+  padding-top: 20px;
+  word-spacing: 0.1em;
+}
+
+/*-----start of Apparel-----*/
+
+.checkbox-container {
+  margin-left: 100px;
+  padding-top: 20px;
+}
+
+.checkbox-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.checkbox-items label {
+  font-weight: bold;
+  font-size: 18px;
+
+}
+
+#item {
+  width: 15%;
+  height: 25px;
+}
+
+/*check on this area properly*/
+
+.img-choice p {
+  padding-top: 15px;
+}
+
+.img-select {
+  padding-top: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.img-select img {
+  margin-right: 40px;
+}
+
+.img {
+  padding-top: 30px;
+}
+
+.img-select label {
+  font-weight: bold;
+}
+
+#image {
+  width: 20%;
+  height: 30px;
+}
+
+.nbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 25px;
+}
+
+.Next-step {
+  border: 1px solid green;
+  width: 18%;
+  height: 80px;
+  background-color: lightgrey;
+}
+
+.Next-step p {
+  font-size: 15px;
+  margin-left: 75px;
+  padding-top: 30px;
+}
+
+.Next-step a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.Next-step a:hover {
+  color: rgb(255, 251, 5);
+}
