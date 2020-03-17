@@ -1,24 +1,24 @@
 // #1 Flight booking fullname function.
 
-function getFullname(firstname, surname) {
-  return firstname + " " + surname;
+function getFullname(firstName, surname, useFormalName) {
+  if (useFormalName === true) {
+    return "Lord" + " " + firstName + " " + surname;
+  } else if (useFormalName !== true) {
+    return firstName + " " + surname;
+  }
 }
-const fullname1 = getFullname("Emilia", "Tambe");
-const fullname2 = getFullname("Ako", "Ayukngat");
-const fullname = getFullname("Benjamin", " Hughes");
-console.log(fullname1);
-console.log(fullname2);
-console.log(fullname);
-let formalname = "Lord" + " " + fullname;
-if ((useFormalname = true)) {
-  console.log(formalname);
-} else {
-  console.log(fullname);
-}
+const fullName = getFullname("Benjamin", "Hughes", true);
+console.log(fullName);
+console.log(getFullname("Benjamin", "Hughes", false));
+
+const fullName1 = getFullname("Jon", "Yohanan");
+console.log(fullName1);
+const fullName2 = getFullname("Jon", "Snow");
+console.log(fullName2);
 
 // #2 Event application.
 
-let weekdays = [
+const weekdays = [
   "Sunday",
   "Monday",
   "Tuesday",
@@ -31,10 +31,9 @@ function EventWeekday(event) {
   const currentDate = new Date();
   const currentDay = currentDate.getDay();
   const day = (currentDay + event) % 7;
-  return `${weekdays[day]}`; 
+  return `${weekdays[day]}`;
 }
 console.log(EventWeekday(5));
-
 
 // #3 Weather wear.
 
@@ -54,28 +53,111 @@ console.log(clothesToWearToday);
 
 // #4 Student manager.
 
-let class07Students = ["Ako", "Maggi", "Martha", "Manyi", "Emilia", "Otto"];
+const class07Students = [];
+
 function addStudentToClass(studentName) {
-  if (class07Students.length > 6) {
-    return "cannot add more students to class 07";
-  } else if (class07Students.includes(studentName)) {
-    return studentName + " " + "is already in class";
-  } else if (studentName === "Queen" && class07Students.length >= 6) {
-    return class07Students.push(studentName) + " " + "Queen B";
-  } else if ((studentName = undefined)) {
-    console.error("please we can't teach an empty chair");
+  if (getNumberOfStudents(class07Students) < 6) {
+    if (studentName == " ") {
+      return "student name can not be empty!" + "please enter a valid name";
+    } else {
+      for (let i = 0; i < getNumberOfStudents(class07Students); i++) {
+        if (studentName == class07Students[i]) {
+          return studentName + " is already in the class ";
+        }
+      }
+    }
+  } else if (studentName == "Queen") {
+    console.log("she can be aded because she is " + studentName);
+  } else {
+    return "Cannot add more students to class 07";
   }
-}
-class07Students = addStudentToClass("Queen");
-console.log(addStudentToClass("Manyi"));
-console.log(addStudentToClass("Ako"));
 
-function getNumberOfStudents() {
-  return class07Students.length;
+  class07Students.push(studentName);
+
+  return "Sucessfully added!";
 }
 
-let numberOfStudents = getNumberOfStudents();
-console.log("Number of students" + " " + numberOfStudents);
-console.log(class07Students);
+//returns the number of students in the class07Students array
 
-/*Please i will need a smooth strategy to tackle this part of the assignment (#student Manager)*/
+function getNumberOfStudents(class07Students) {
+  const arrayLength = class07Students.length;
+
+  return arrayLength;
+}
+
+// this function shows who is currently added in class07
+
+function showListsInClass(studentName) {
+  for (let i = 0; i < studentName.length; i++) {
+    console.log(studentName[i]);
+
+    console.log(addStudentToClass(studentName[i]));
+  }
+
+  return;
+}
+
+//here is the test to all conditions
+
+const name = [
+  "Endam",
+  "Manyi",
+  "Benjamin",
+  " ",
+  "Emilia",
+  "Andrew",
+  "Otto",
+  "Atud",
+  "Stephen",
+  "Queen"
+];
+
+showListsInClass(name);
+
+console.log("Number of Students: " + getNumberOfStudents(class07Students));
+
+function showStudentNameList(studentName) {
+  for (let i = 0; i < studentName.length; i++) console.log(studentName[i]);
+
+  return;
+}
+
+console.log("The list of students name in the class07:");
+
+showStudentNameList(class07Students);
+
+
+
+//#5 Candy Prices.(Optional)
+
+const boughtCandyPrices = []
+const amountToSpend = Math.random() * 100
+console.log(amountToSpend);
+
+function addCandy(candyType, weight) {
+  if (candyType === 'Sweet') {
+    boughtCandyPrices.push(0.5 * weight)
+  } else if (candyType === 'Chocolate') {
+    boughtCandyPrices.push(0.7 * weight)
+  } else if (candyType === 'Toffee') {
+    boughtCandyPrices.push(1.1 * weight)
+  } else if (candyType === 'Chewinggum') {
+    boughtCandyPrices.push(0.03 * weight)
+  }
+};
+function canBuyMoreCandy(arrayOfPrices) {
+  let totalPrice = 0
+  for (let i = 0; i < arrayOfPrices.length; i++) {
+    totalPrice = totalPrice + arrayOfPrices[i]
+  }
+  return totalPrice < amountToSpend
+}
+
+addCandy('Sweet', 10)
+addCandy('Chocolate', 100)
+
+console.log('boughtCandyPrices', boughtCandyPrices);
+
+const isAbleToBuyMoreCandy = canBuyMoreCandy(boughtCandyPrices);
+
+console.log(isAbleToBuyMoreCandy);
