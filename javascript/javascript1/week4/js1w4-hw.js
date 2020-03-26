@@ -120,7 +120,6 @@ function getReply(command) {
 console.log(getReply("Hello my name is Benjamin"));
 console.log(getReply("What is my name"));
 console.log(getReply("What is my name"));
-//console.log(names);
 console.log(getReply("What day is it today"));
 console.log(getReply("Add homework to my todo"));
 console.log(getReply("Add cooking to my todo"));
