@@ -4,7 +4,11 @@ const spiritAnimalName = [
   "Rattle Snake",
   "Cobra",
   "The Eagle",
-  "Black Lion"
+  "Black Lion",
+  "Flying Mantis",
+  "Crouching Tiger",
+  "Black Scorpion",
+  "Quick Tortoise"
 ];
 const buttonTag = document.getElementById("clickonMe");
 buttonTag.addEventListener("click", spiritAnimal);
@@ -19,8 +23,6 @@ function spiritAnimal() {
     const randomSpiritAnimal = spiritAnimalName[randomName];
     document.getElementById(
       "spiritAnim"
-    ).textContent = `${inputName.value} ${randomSpiritAnimal}`;
+    ).textContent = `${inputName.value} - ${randomSpiritAnimal}`;
   }
 }
-
-//onclick="spiritAnimalName()"

@@ -1,7 +1,6 @@
 //PART ONE
 
 // #1 Finding the shortest word of an Array.
-
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
 function findingShortestWord(str) {
   let shortWord = Infinity;
@@ -34,7 +33,6 @@ function average(numbers) {
     sum += numbers[i];
   }
   return sum / numbers.length;
-
 }
 //console.log(average(housePrices));
 
@@ -52,35 +50,25 @@ function median(numbers) {
 
 //Returning the values of average & median in an Object:
 function getAverageAndMedian(housePrices) {
-    let averageAndMedian = {
-        average: average(housePrices),
-        median: median(housePrices)
-    };
-    return averageAndMedian
-};
+  let averageAndMedian = {
+    average: average(housePrices),
+    median: median(housePrices)
+  };
+  return averageAndMedian;
+}
 console.log(getAverageAndMedian(housePrices));
 
 //Rendering the prices, the average and median in a web page.
+const ulTag = document.querySelector("ul");
 
-const prices = getAverageAndMedian(housePrices);
-const liTag = document.createElement('li');
-liTag.innerHTML =  `The house prices are:${housePrices.join(' , ')}`  
-const ulTag = document.querySelector('ul');
+const liTag = document.createElement("li");
+liTag.innerHTML = `The house prices are:${housePrices}`;
 ulTag.appendChild(liTag);
 
-// let price = getMedianAndAverage(housePrices)
-// const ulTag = document.querySelector('ul');
-// const liTag1 = document.createElement('li');
-// liTag1.innerHTML = "The house prices are: " + housePrices.join(", ");
-// ulTag.appendChild(liTag1);
-// const liTag2 = document.createElement('li');
-// liTag2.innerHTML = "The average price is: " + price.average;
-// ulTag.appendChild(liTag2);
-// const liTag3 = document.createElement('li');
-// liTag3.innerHTML = "The median price is: " + price.median;
+const liTag2 = document.createElement("li");
+liTag2.innerHTML = `The average price is: ${average(housePrices)}`;
+ulTag.appendChild(liTag2);
 
-
-//PART TWO
-
-//Spirit animal name generator:
-
+const liTag3 = document.createElement("li");
+liTag3.innerHTML = `The median price is: ${median(housePrices)}`;
+ulTag.appendChild(liTag3);
