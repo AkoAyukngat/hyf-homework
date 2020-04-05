@@ -10,7 +10,7 @@ const names = [
   "Rasmus",
   "Samuel",
   "katrine",
-  "Tala"
+  "Tala",
 ];
 const nameToRemove = "Ahmad";
 for (let i = 0; i < names.length; i++) {
@@ -24,7 +24,7 @@ console.log(names);
 
 const travelInformation = {
   speed: 50,
-  destinationDistance: 432
+  destinationDistance: 432,
 };
 function timeTravel(destinationDistance, speed) {
   return 432 / 50;
@@ -34,17 +34,7 @@ console.log(travelTime);
 
 const distanceInHours = 8;
 const distanceInMins = Math.floor(0.64 * 60);
-console.log(
-  distanceInHours +
-    " " +
-    "hours" +
-    " " +
-    "and" +
-    " " +
-    distanceInMins +
-    " " +
-    "minutes"
-);
+console.log(`${distanceInHours} hours and ${distanceInMins} minutes`);
 
 //3 Series duration of my life.
 
@@ -53,20 +43,20 @@ const seriesDurations = [
     title: "Power",
     days: 2,
     hours: 15,
-    minutes: 0
+    minutes: 0,
   },
   {
     title: "Queen Sono",
     days: 2,
     hours: 19,
-    minutes: 30
+    minutes: 30,
   },
   {
     title: "The Walking Dead",
     days: 9,
     hours: 3,
-    minutes: 51
-  }
+    minutes: 51,
+  },
 ];
 
 function seriesDurationOfLifespan(durationOfSeries) {
@@ -80,15 +70,12 @@ function seriesDurationOfLifespan(durationOfSeries) {
     totalTimeSpent += timePercentage;
 
     console.log(
-      durationOfSeries[i].title +
-        " took " +
-        timePercentage.toFixed(2) +
-        " % of my life"
+      `${durationOfSeries[i].title} took ${timePercentage.toFixed(
+        2
+      )} % of my life`
     );
   }
-  console.log(
-    "In total that is " + totalTimeSpent.toFixed(2) + "  % of my life"
-  );
+  console.log(`In total that is ${totalTimeSpent.toFixed(2)} % of my life`);
   return durationOfSeries;
 }
 
@@ -101,23 +88,23 @@ const songDatabase = [
   {
     songId: 1,
     title: "My baby",
-    artist: "Soggy socks"
+    artist: "Soggy socks",
   },
   {
     songId: 2,
     title: "3 nails in wood",
-    artist: "The carpenters"
+    artist: "The carpenters",
   },
   {
     songId: 3,
     title: "Blacker than black",
-    artist: "Instant coffee"
+    artist: "Instant coffee",
   },
   {
     songId: 4,
     title: "When is enough too little?",
-    artist: "The spies girls"
-  }
+    artist: "The spies girls",
+  },
 ];
 
 const myPlaylist = [];
@@ -143,12 +130,12 @@ const searchSong = [];
 function getSongByTitle(title) {
   for (let i = 0; i < songDatabase.length; i++) {
     if (title !== songDatabase[i].title) {
-      console.log("song not in database");
     }
     if (title === songDatabase[i].title) {
       searchSong.push(songDatabase[i]);
     }
   }
+  console.log ("song not in database");
 }
 
 getSongByTitle("Shekere");
@@ -198,13 +185,7 @@ console.log(notes);
 function logOutNotesFormatted() {
   for (let i = 0; i < notes.length; i++) {
     console.log(
-      "The note with id" +
-        " " +
-        notes[i].id +
-        " " +
-        "has the following content" +
-        " " +
-        notes[i].content
+      `The note with id ${notes[i].id} has the following content ${notes[i].content}`
     );
   }
 }
