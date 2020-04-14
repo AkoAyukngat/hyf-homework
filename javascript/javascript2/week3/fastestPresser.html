@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The fastest presser in this realm</title>
+    <link rel="stylesheet" href="fastestPresser.css" />
+  </head>
+  <body>
+    <div class="containner">
+      <h1>Fastest Presser</h1>
+      <div>
+        <input
+          type="number"
+          id="inputButton"
+          name="input"
+          required
+          minlength="4"
+          maxlength="8"
+          size="20"
+          placeholder="insert timer/sec"
+        />
+      </div>
+      <br />
+
+      <br />
+      <div>
+        <button id="button1" type="button">Start Game!</button>
+      </div>
+      <br />
+
+      <br />
+      <div class="Players">
+        <button class="PlyS">Player S</button>
+        <button class="PlyL">Player L</button>
+      </div>
+      <div class="End">
+        <p class="Result"></p>
+        <br />
+
+        <br />
+        <button class="Restart">Start Again!</button>
+      </div>
+    </div>
+    <script src="fastestPresser.js"></script>
+  </body>
+</html>

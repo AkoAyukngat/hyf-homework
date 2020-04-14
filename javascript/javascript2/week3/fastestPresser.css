@@ -1,0 +1,69 @@
+body {
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 2rem;
+  background-color: rgb(36, 98, 78);
+  font-family: Georgia, serif;
+}
+
+h1 {
+  color: black;
+  font-size: 75px;
+  font-style: unset;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18,
+    0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+}
+
+#inputButton {
+  width: 20%;
+  height: 30px;
+  border-color: yellow;
+}
+
+#button1 {
+  width: 20%;
+  height: 50px;
+  border: 19px hidden #1c6ea4;
+  border-radius: 31px 31px 29px 34px;
+  background-color: darkgreen;
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  letter-spacing: 30px;
+}
+
+.PlyL {
+  font-size: 50px;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  color: purple;
+  background-color: rgb(253, 221, 38);
+}
+
+.PlyS {
+  font-size: 50px;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  color: purple;
+  background-color: rgb(253, 221, 38);
+}
+
+.Result {
+  color: yellow;
+  font-size: 30px;
+}
+
+.Restart {
+  border: 5px none #1c6ea4;
+  border-radius: 24px 28px 24px 26px;
+  background-color: peru;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
