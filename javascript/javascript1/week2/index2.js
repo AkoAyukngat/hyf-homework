@@ -57,16 +57,16 @@ const class07Students = [];
 
 function addStudentToClass(studentName) {
   if (getNumberOfStudents(class07Students) < 6) {
-    if (studentName == " ") {
+    if (studentName === " ") {
       return "student name can not be empty!" + "please enter a valid name";
     } else {
       for (let i = 0; i < getNumberOfStudents(class07Students); i++) {
-        if (studentName == class07Students[i]) {
+        if (studentName === class07Students[i]) {
           return studentName + " is already in the class ";
         }
       }
     }
-  } else if (studentName == "Queen") {
+  } else if (studentName === "Queen") {
     console.log("she can be aded because she is " + studentName);
   } else {
     return "Cannot add more students to class 07";
