@@ -27,14 +27,16 @@ const travelInformation = {
   destinationDistance: 432,
 };
 function timeTravel(destinationDistance, speed) {
-  return 432 / 50;
+  return travelInformation.destinationDistance / travelInformation.speed;
 }
 const travelTime = timeTravel(travelInformation);
-console.log(travelTime);
+//console.log(travelTime);
 
-const distanceInHours = 8;
-const distanceInMins = Math.floor(0.64 * 60);
-console.log(`${distanceInHours} hours and ${distanceInMins} minutes`);
+const travelTimeInHours = Math.floor(travelTime);
+//console.log(travelTimeInHours);
+const travelTimeInMins = Math.floor((travelTime - travelTimeInHours) * 60);
+//console.log(travelTimeInMins);
+console.log(`${travelTimeInHours} hours and ${travelTimeInMins} minutes`);
 
 //3 Series duration of my life.
 
@@ -129,16 +131,17 @@ console.log(songDatabase);
 const searchSong = [];
 function getSongByTitle(title) {
   for (let i = 0; i < songDatabase.length; i++) {
-    if (title !== songDatabase[i].title) {
-    }
     if (title === songDatabase[i].title) {
       searchSong.push(songDatabase[i]);
     }
   }
-  console.log ("song not in database");
+  if (title !== songDatabase.title) {
+    return "song not in database";
+  }
+  return;
 }
 
-getSongByTitle("Shekere");
+getSongByTitle("Bombolo");
 getSongByTitle("ca bouge pas");
 getSongByTitle("50 Naira");
 getSongByTitle("Wait");
