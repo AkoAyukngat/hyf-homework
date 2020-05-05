@@ -1,0 +1,32 @@
+.container {
+  width: calc(200px * 4 + 3em);
+  margin: auto;
+}
+
+#result {
+  columns: 4;
+  column-gap: 1em;
+  background-color: black;
+  margin-top: 20px;
+}
+
+.items{
+    margin-bottom: 1em;
+}
+
+#search-input{
+    width: 85%;
+    height:45px;
+    background-color: transparent;
+}
+#button{
+    width: 14%;
+    height: 53px;
+    background-color: tomato;
+}
+#gif-number{
+    width: 40%;
+    height:45px;
+    background-color: transparent; 
+    margin-top: 5px;
+}
