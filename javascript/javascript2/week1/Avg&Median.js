@@ -50,7 +50,7 @@ function median(numbers) {
 
 //Returning the values of average & median in an Object:
 function getAverageAndMedian(housePrices) {
-  let averageAndMedian = {
+  const averageAndMedian = {
     average: average(housePrices),
     median: median(housePrices)
   };
