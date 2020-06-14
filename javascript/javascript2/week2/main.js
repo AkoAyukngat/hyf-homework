@@ -36,7 +36,7 @@ const searchItem = document.querySelector("div.search > input");
 searchItem.addEventListener("keyup", filterInput);
 function filterInput() {
   const inputText = searchItem.value;
-  const filterProducts = products.filter(product =>
+  const filterProducts = products.filter((product) =>
     product.name.toLowerCase().includes(inputText)
   );
   renderProducts(filterProducts);
