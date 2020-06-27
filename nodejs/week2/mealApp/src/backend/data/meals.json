@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Indian food in the summer",
+    "maxNumberOfGuests": 5,
+    "description": "A nice night out eating delicious indian food",
+    "createdAt": "2019/12/7 14:34",
+    "price": 67
+  },
+  {
+    "id": 2,
+    "title": "Ekwand with coco-yam sauce ",
+    "maxNumberOfGuests": 8,
+    "description": "grated cocoyams tied in plantain leaves",
+    "createdAt": "2020/14/6 14:34",
+    "price": 100
+  },
+  {
+    "id": 3,
+    "title": "Water fufu and Eru",
+    "maxNumberOfGuests": 15,
+    "description": "fermented cassava with forest harvested eru leaves cooked in red oil",
+    "createdAt": "2020/5/6 14:34",
+    "price": 88
+  }
+]
