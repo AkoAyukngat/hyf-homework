@@ -1,18 +1,16 @@
 const express = require("express");
 const app = express.Router();
-const mealsRouter = require("../data/meals.json");
-const reviewsRouter = require("../data/reviews.json");
+const meals = require("../data/meals.json");
+const reviews = require("../data/reviews.json");
 
 //Respond with the json for all the meals
 app.get("/meals", (req, res) => {
-  mealsRouter.forEach((meal) => {
-    meal.reviewsRouter = reviewsRouter.filter(
-      (review) => meal.id === review.mealId
-    );
+  meals.forEach((meal) => {
+    meal.reviews = reviews.filter((review) => meal.id === review.mealId);
     return meal;
   });
 
-  res.send(mealsRouter);
+  res.send(meals);
 });
 
 module.exports = app;
