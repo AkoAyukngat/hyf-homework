@@ -3,7 +3,7 @@ const app = express.Router();
 const mealsRouter = require("../data/meals.json");
 
 //json for the meal with corresponding id:
-app.get("/meals/:id", (req, res) => {
+app.get("/:id", (req, res) => {
   const id = req.params.id;
   if (!isNaN(id)) {
     const getMealById = mealsRouter.filter((meal) => meal.id === parseInt(id));
@@ -22,11 +22,8 @@ app.get("/meals/:id", (req, res) => {
 //Get meals that has been created after the date
 //Only specific number of meals
 
-app.get("/meals", (req, res) => {
-  const maxPrice = req.query.maxPrice;
-  const title = req.query.title;
-  const createdAfterDate = Date.parse(req.query.createdAfterDate);
-  const limit = req.query.limit;
+app.get("/", (req, res) => {
+  const { maxPrice, title, createdAfterDate, limit } = req.query;
 
   if (maxPrice) {
     const parsedPrice = parseFloat(maxPrice);
