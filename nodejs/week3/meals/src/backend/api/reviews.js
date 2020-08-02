@@ -1,20 +1,12 @@
 const express = require("express");
-const app = express();
 const router = express.Router();
 const knex = require("../database");
-
-app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
 
 //GET api/reviews/:
 
 router.get("/", async function (req, res) {
-  const allReviews = await knex.select("*").table("review");
-  res.send(allReviews);
+  const reviews = await knex.select("*").table("review");
+  res.json(reviews);
 });
 
 //POST api/reviews/:
@@ -29,16 +21,16 @@ router.get("/", async function (req, res) {
     created_date: req.body.created_date,
   };
   await knex("review").insert(addReview);
-  res.send("New review added");
+  res.json("New review added");
 });
 
 //GET api/reviews/{id}:
 
 router.get("/:id", async function (req, res) {
-  const getReviewById = await knex("review").where({
+  const getReviewsById = await knex("review").where({
     id: req.params.id,
   });
-  res.send(getReviewById);
+  res.json(getReviewsById);
 });
 
 //PUT api/reviews/{id}:
@@ -47,7 +39,7 @@ router.put("/:id", async function (req, res) {
   const updateReviewById = await knex("review")
     .where({ id: req.params.id })
     .update({ description: req.query.description });
-  res.send(`Review with this:${updateReviewById} has been updated`);
+  res.json(`Review with this:${updateReviewById} has been updated`);
 });
 
 //DELETE api/reviews/{id}:
@@ -57,8 +49,8 @@ router.delete("/:id", async function (req, res) {
     .where({
       id: req.params.id,
     })
-    .del();
-  res.send(`Review with id ${deleteReviewById} was deleted`);
+    .delete();
+  res.json(`Review with id ${deleteReviewById} was deleted`);
 });
 
 module.exports = router;
