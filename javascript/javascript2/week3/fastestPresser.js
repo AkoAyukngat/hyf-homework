@@ -1,5 +1,6 @@
 const timerInput = document.querySelector("#inputButton");
 const startGame = document.querySelector("#button1");
+
 const playerS = document.querySelector(".PlyS");
 const playerL = document.querySelector(".PlyL");
 const result = document.querySelector(".Result");
@@ -26,6 +27,9 @@ function playGame() {
         }
         if (counterS === counterL) {
           result.innerHTML = "It was a draw";
+        }
+        if (counterS && counterL === 0) {
+          result.innerHTML = "start game";
         }
       };
       playerResult();

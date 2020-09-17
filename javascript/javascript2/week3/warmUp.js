@@ -110,8 +110,7 @@ const logBadJoke = () => {
 const jokeCreator = (shouldTellFunnyJoke, logFunnyJoke, logBadJoke) => {
   if (shouldTellFunnyJoke === true) {
     return logFunnyJoke();
-  }
-  else if (shouldTellFunnyJoke === false) {
+  } else {
     return logBadJoke();
   }
 };
