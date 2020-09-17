@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Api</title>
+    <link rel="stylesheet" href="weather.css" />
+    <link rel="stylesheet" href="fonts/Rimouski.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="input">
+        <input
+          type="text"
+          id="input-value"
+          placeholder="Please enter a city name"
+        />
+        <button id="submit">Submit</button>
+      </div>
+      <div class="display-container">
+        <div class="app-title">
+          <p>Weather</p>
+        </div>
+        <div class="location">
+          <h1 id="city"></h1>
+        </div>
+
+        <div id="weather-icon">
+          <img src="icons/unknown.png" id="weatherIcon" />
+        </div>
+        <div id="notification"></div>
+        <div>
+          <p id="temp">- °<span>C</span></p>
+        </div>
+        <div>
+          <p id="wind-speed"></p>
+        </div>
+        <div>
+          <p id="cloudiness">-</p>
+        </div>
+        <div>
+          <p id="sunrise"></p>
+        </div>
+        <div>
+          <p id="sunset"></p>
+        </div>
+        <div>
+          <img src="" alt="" id="Map" />
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
