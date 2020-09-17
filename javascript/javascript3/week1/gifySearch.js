@@ -39,7 +39,5 @@ const giphySearch = (searchWord) => {
 
       result.innerHTML = resultHtml;
     });
-  //   .catch((error) => {
-  //     console.log(error.message);
-  //   });
+  
 };
