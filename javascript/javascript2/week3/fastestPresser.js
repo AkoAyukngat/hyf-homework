@@ -1,6 +1,10 @@
 const timerInput = document.querySelector("#inputButton");
+<<<<<<< Updated upstream
 const startGame = document.querySelector("#button1");
 
+=======
+const startGame = (document.querySelector("#button1").disabled = true);
+>>>>>>> Stashed changes
 const playerS = document.querySelector(".PlyS");
 const playerL = document.querySelector(".PlyL");
 const result = document.querySelector(".Result");
@@ -29,7 +33,11 @@ function playGame() {
           result.innerHTML = "It was a draw";
         }
         if (counterS && counterL === 0) {
+<<<<<<< Updated upstream
           result.innerHTML = "start game";
+=======
+          result.innerHTML = "Please start game";
+>>>>>>> Stashed changes
         }
       };
       playerResult();

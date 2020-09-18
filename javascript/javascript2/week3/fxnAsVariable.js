@@ -11,9 +11,16 @@ const arrayOfFunctions = [
     console.log("Walnut Bread");
   },
 ];
+<<<<<<< Updated upstream
 
 arrayOfFunctions.forEach(func => func());
 
+=======
+//arrayOfFunctions.forEach(func => func());
+arrayOfFunctions.forEach(function (result) {
+  result();
+});
+>>>>>>> Stashed changes
 
 //#2 Create a function as a const and try creating a function normally:
 
