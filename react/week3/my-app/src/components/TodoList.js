@@ -1,73 +1,29 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
+import TodoInput from "./TodoInput";
 
-const Todo = ({ todo, index, completeTodo, deleteTodo, editTodo }) => {
-  return (
-    <div
-      style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}
-      className="todo"
-    >
-      {todo.description}
-      <div>
-        <input type="checkbox" onClick={() => completeTodo(index)} />
-        <button onClick={() => deleteTodo(index)}>Delete</button>
-        <button onClick={() => editTodo(index)}>Edit</button>
-      </div>
-    </div>
-  );
-};
+const TodoList = (props) => {
+  const data = props.todos.map((todo) => {
+    return { ...todo, isCompleted: false };
+  });
 
-const TodoInput = ({ addTodo }) => {
-  const [value, setValue] = useState("");
+  const [todos, setTodos] = useState(data);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!value) return;
-    addTodo(value);
-    setValue("");
-  };
+  const addTodo = (description, deadline) => {
+    const strDate =
+      deadline.getFullYear() +
+      "-" +
+      (deadline.getMonth() + 1) +
+      "-" +
+      deadline.getDate();
 
-  return (
-    <form>
-      <input
-        type="text"
-        placeholder="Description..."
-        className="Description"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <input type="number" placeholder="Deadline..." />
-      <button onClick={handleSubmit}>Add Todo</button>
-    </form>
-  );
-};
-
-export const TodoList = () => {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      description: "Get out of bed",
-      isCompleted: false,
-    },
-    {
-      id: 2,
-      description: "Brush teeth",
-      isCompleted: false,
-    },
-    {
-      id: 3,
-      description: "Eat breakfast",
-      isCompleted: false,
-    },
-  ]);
-
-  const addTodo = (description) => {
-    const newTodos = [...todos, { description }];
+    const newTodos = [...todos, { description, deadline: strDate }];
     setTodos(newTodos);
   };
 
   const completeTodo = (index) => {
     const newTodos = [...todos];
-    newTodos[index].isCompleted = true;
+    newTodos[index].isCompleted = !todos[index].isCompleted;
     setTodos(newTodos);
   };
 
@@ -76,20 +32,18 @@ export const TodoList = () => {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
-  const editTodo = (todo, index) => {
-    console.log(todo);
-    setTodos(
-      todos.map((todo) => {
-        if (todo.index === todo) {
-          return { ...todos, todo};
-        }
-        return todo;
-      })
-    );
+  const updateTodo = (id, value) => {
+    const newTodo = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, description: value };
+      }
+      return todo;
+    });
+    setTodos(newTodo);
   };
 
   return (
-    <div className="App">
+    <div className="todos">
       <div className="Todo_List">
         <TodoInput addTodo={addTodo} />
         {todos.map((todo, index) => (
@@ -99,10 +53,13 @@ export const TodoList = () => {
             todo={todo}
             completeTodo={completeTodo}
             deleteTodo={deleteTodo}
-            editTodo={editTodo}
+            updateTodo={updateTodo}
           />
         ))}
+        {todos.length === 0 && <span className="No_Todos">No more Todos Left :(</span>}
       </div>
     </div>
   );
 };
+
+export default TodoList;
