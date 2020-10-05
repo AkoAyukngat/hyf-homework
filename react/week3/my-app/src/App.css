@@ -1,0 +1,150 @@
+/* Todo CSS */
+
+.App {
+  display: flex;
+  justify-content: center;
+}
+.description {
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-radius: 0.3em;
+}
+.deadline {
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  margin-left: 6px;
+  border-radius: 0.3em;
+}
+.Todo_List {
+  background: purple;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 400px;
+}
+
+.todo {
+  background: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 3px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.No_Todos {
+  color: #ffffff;
+}
+
+.addTodo_Button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.6em 0.6em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: green;
+  text-align: center;
+  transition: all 0.2s;
+}
+.addTodo_Button:hover {
+  color: #000000;
+  background-color: purple;
+}
+
+.delete_button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: red;
+  text-align: center;
+  transition: all 0.2s;
+}
+.delete_button:hover {
+  color: #000000;
+  background-color: purple;
+}
+
+.edit_button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: yellow;
+  text-align: center;
+  transition: all 0.2s;
+}
+.edit_button:hover {
+  color: #000000;
+  background-color: purple;
+}
+
+/* Timer CSS */
+.timer {
+  border-radius: 0.3em;
+  border-color: purple;
+  color: purple;
+  border-style: solid;
+  max-width: 400px;
+}
+.time_proper {
+  color: maroon;
+}
+
+.start_button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: darkgreen;
+  text-align: center;
+  transition: all 0.2s;
+}
+.start_button:hover {
+  color: #000000;
+  background-color: purple;
+}
+.reset_button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: indianred;
+  text-align: center;
+  transition: all 0.2s;
+}
+.reset_button:hover {
+  color: #000000;
+  background-color: purple;
+}
