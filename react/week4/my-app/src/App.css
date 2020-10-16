@@ -1,0 +1,15 @@
+.block {
+  display: block;
+}
+
+.repos_list {
+  display: block;
+}
+
+.user_details {
+  list-style: none;
+  font-size: large;
+}
+.user_link {
+  color: purple;
+}
