@@ -1,5 +1,7 @@
 Spinat.
 Cucumber.
-Okro.
+Tomato.
 HuckleBerry.
 Eru.
+Carrot.
+Pepper.
