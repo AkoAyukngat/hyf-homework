@@ -4,17 +4,19 @@ const translateOneByOne = () => {
     y: 300,
   }).then(() => {
     console.log("Red circle has just been moved");
-  });
-  moveElement(document.querySelector("ul.marks li:nth-child(2)"), {
-    x: 400,
-    y: 300,
-  }).then(() => {
+     return moveElement(document.querySelector("ul.marks li:nth-child(2)"), {
+				x: 400,
+				y: 300,
+			})
+  })
+  .then(() => {
     console.log("Blue circle was moved");
-  });
-  moveElement(document.querySelector("ul.marks li:nth-child(3)"), {
-    x: 400,
-    y: 20,
-  }).then(() => {
+    return moveElement(document.querySelector("ul.marks li:nth-child(3)"), {
+			x: 400,
+			y: 20,
+		})
+  })
+     .then(() => {
     console.log("Green circle flew to its position");
   });
 };
